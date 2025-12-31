@@ -1,0 +1,36 @@
+python_rag/
+│
+├── main.py                          # Main entry point - runs the chatbot
+├── README.md                        # Project documentation
+│
+├── config/                          # Configuration module
+│   ├── __init__.py                  # Exports configuration constants
+│   └── config.py                    # API keys, database URIs, model settings
+│
+├── tools/                           # LLM Tools module
+│   ├── __init__.py                  # Exports tool functions
+│   └── tools.py                     # Message formatting tools (beginner/advanced)
+│
+├── graph/                           # LangGraph workflow module
+│   ├── __init__.py                  # Exports graph components
+│   ├── state.py                     # State definition for the workflow
+│   ├── nodes.py                     # Node functions (validate, retrieve, agent)
+│   └── workflow.py                  # Graph structure and edge definitions
+│
+├── vector_db/                       # Vector database module
+│   ├── __init__.py                  # Module documentation
+│   └── push_to_vector_db.py        # Script to index documents into Qdrant
+│
+└── utils/                           # Utilities module
+    ├── __init__.py                  # Exports utility functions
+    └── chat_interface.py            # Chat loop and user interaction utilities
+
+ORGANIZATION SUMMARY:
+=====================
+✅ config/      - All configuration and constants in one place
+✅ tools/       - Tool definitions for LLM function calling
+✅ graph/       - LangGraph workflow components (state, nodes, workflow)
+✅ vector_db/   - Vector database operations and indexing scripts
+✅ utils/       - Helper functions and chat interface utilities
+✅ main.py      - Clean entry point that imports from organized modules
+✅ README.md    - Complete project documentation
