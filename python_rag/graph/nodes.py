@@ -68,6 +68,23 @@ def validate_user_query(state: State) -> dict:
 
     return {"is_valid_query": is_valid}
 
+# def validate_user_query(state: State) -> dict:
+#     results = vector_db.similarity_search_with_score(
+#         query=state["user_query"],
+#         k=1
+#     )
+
+#     if not results:
+#         return {"is_valid_query": False}
+
+#     doc, score = results[0]
+
+#     SIMILARITY_THRESHOLD = 0.75
+
+#     is_valid = score >= SIMILARITY_THRESHOLD
+
+#     return {"is_valid_query": is_valid}
+
 
 def retrieve_node(state: State) -> dict:
     """Retrieve relevant documents from the vector database."""
